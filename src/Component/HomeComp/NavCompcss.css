@@ -1,0 +1,71 @@
+.new{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
+}
+.main-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    position: relative;
+
+}
+.outer-div{
+    width: 100%;
+    max-width: 40rem;
+}
+.inputdiv{
+    height: 40px;
+    width: 100%;
+    max-width: 40rem;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    background-color:#f1eaea9a;
+    color: #5F6368;
+    border: none;
+}
+
+.search{
+    padding: 0 20px;
+}
+
+.search,.cancel i{
+    font-size: 20px;
+}
+
+.inputtag{
+    /* height: 100%; */
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+.inputt{
+    width: 33rem;
+}
+.inputtag:focus{
+    outline: none;
+}
+.cancel{
+    padding: 0 20px;
+}
+.listdata ul{
+    display: flex;
+    align-items: center;
+}
+.listdata ul li{
+    color: #5F6368;
+    padding: 0px 18px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.listdata ul li:hover{
+    color: rgb(18, 155, 209);
+}
+.gethelp{
+    position: absolute;
+    right: 130px;
+    font-size: 12px;
+
+}

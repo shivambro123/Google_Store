@@ -1,0 +1,14 @@
+.pad{
+    padding: 120px 0 80px;
+}
+.title-div{
+    font-size: 60px;
+    line-height: 4.25rem;
+    letter-spacing: -0.125rem;
+    font-weight: 700;
+    font-family: "Arial";
+    color: #3C4043;
+}
+.title-div span{
+    color: #188038;
+}
