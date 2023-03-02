@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Main/>}/>
           <Route path='/cart' element={<Cart/>}/>
           {/* <Route path="/*" element={<ErrorPage/>}/> */}
-          <Route path='/Google_Store/' element={<Cart/>}/>
+          <Route path='/Google_Store/' element={<Main/>}/>
 
         </Routes>
       </Router>
