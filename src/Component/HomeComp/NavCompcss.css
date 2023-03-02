@@ -3,6 +3,7 @@
     width: 100%;
     z-index: 2;
     background-color: white;
+    padding: 0 40px;
 }
 .main-ul{
     display: flex;
@@ -68,4 +69,20 @@
     right: 130px;
     font-size: 12px;
 
+}
+.count{
+    font-size: 18px;
+    color: red;
+}
+@media screen and (min-width:315px) and (max-width:420px){
+    .listdata ul li:nth-child(2){
+        display: none;
+    }
+    .new{
+        padding: 0 20px;
+    }
+    .listdata ul li{
+        padding: 0 10px;
+    }
+    
 }

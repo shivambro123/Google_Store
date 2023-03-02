@@ -31,7 +31,7 @@ const cancelHandler=()=>{
   return (
     <>
    
-        <div className="px-5 pt-2 new">
+        <div className="pt-2 new">
           <div className="main-ul">
             <div>
             <NavLink to="/"> <img src="google_logo.png" height={30} width={30} alt="logo" /></NavLink>
@@ -44,7 +44,7 @@ const cancelHandler=()=>{
                 <ul style={{listStyleType:'none'}}>
                    {(condition)?null:<li onClick={()=>Handler(true)}><i class="fa fa-search" aria-hidden="true"></i></li>}
                     <li onMouseOver={overHandler} onMouseOut={outHandler}><NavLink><i class="fa fa-question-circle" aria-hidden="true"></i></NavLink></li>
-                    <li><NavLink to="/cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i><span style={{fontSize:'18px',color:'red'}}>{state.count}</span></NavLink></li>
+                    <li style={{display:'inline'}}><NavLink to="/cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i><span className="count">{state.count}</span></NavLink></li>
                     <li><NavLink><img src="profile.jpeg"
                     height={30}
                     width={30}

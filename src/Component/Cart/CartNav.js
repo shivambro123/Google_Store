@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const CartNav = () => {
   return (
     <div>
-        <div className="px-5 pt-2 new">
+        <div className="pt-2 new">
           <div className="main-ul">
             <div>
             <NavLink to="/"> <img src="google_logo.png" height={30} width={30} alt="logo" /></NavLink>
@@ -13,7 +13,7 @@ const CartNav = () => {
             <div>
                 <span className='cartNav-title'>Basket</span>
             </div>
-            <div>
+            <div className='hh'>
               <div className="listdata">
                 <ul style={{listStyleType:'none'}}>
                     <li><NavLink><img src="profile.jpeg"

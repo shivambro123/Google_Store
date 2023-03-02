@@ -15,7 +15,19 @@
 }
 .product-item{
     width: 75%;
-    
     /* border: 1px solid; */
 
+}
+@media screen and (min-width:315px) and (max-width:420px){
+   .product-wrapper{
+    display: block;
+   }
+   .product-filter{
+    width: 100%;
+   }
+   .product-item{
+    width: 100%;
+   }
+   
+    
 }

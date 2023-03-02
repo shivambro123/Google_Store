@@ -8,6 +8,15 @@
     position: absolute;
     top: 200px;
     left:40%;
+}
 
+@media screen and (max-width:420px){
+    .hh .listdata ul li{
+        padding: 0;
+    }
+    .empty{
+        left: 20%;
 
+    }
+    
 }

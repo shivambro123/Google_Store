@@ -1,6 +1,7 @@
 
 .item-container{
-margin: auto;
+  margin: auto;
+
 }
 .item-div{
     height: 100%;
@@ -34,3 +35,18 @@ margin: auto;
   padding: 5px 5px;
   font-size: 13px;
 }
+
+@media screen and (max-width:420px) {
+  .item-div{
+    width: 250px;
+  }
+  .imagesize{
+    width: 240px;
+    padding: 4rem 2rem;
+    
+  }
+  .item-container{
+  }
+  
+}
+

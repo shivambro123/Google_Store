@@ -11,9 +11,7 @@
     margin-bottom: 20px;
     line-height: 24px;
 }
-.product-checkbox{
-  
-}
+
 .product-checkbox input{
     height: 15px;
     width: 15px;
@@ -25,4 +23,11 @@
     color: #664D69;
     padding-left: 15px;
     font-weight: 500;
+}
+@media screen and (min-width:315px) and (max-width:420px){
+.wrapper-field{
+    height: 20vh;
+}
+
+    
 }

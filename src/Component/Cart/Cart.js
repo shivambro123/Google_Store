@@ -14,7 +14,7 @@ const Cart = ({product}) => {
     <CartNav/>
     <div>
         {(state.count!=0)?
-        <div className='item-wrapper'>
+        <div className='item-wrapper' >
       {state.task.map((val,ind)=>{
         return (
             <>

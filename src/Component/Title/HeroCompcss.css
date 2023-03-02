@@ -12,3 +12,10 @@
 .title-div span{
     color: #188038;
 }
+@media screen and (max-width:420px) {
+        .title-div{
+            font-size: 36px;
+            line-height: 2.6rem;
+        }
+    
+}
