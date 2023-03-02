@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import { DataContext } from '../Context/ContextComp'
+import CartNav from './CartNav';
 
 const Cart = ({product}) => {
     const {state,dispatch} = useContext(DataContext);
+
+   console.log(state.count)
     console.log(state.task)
   return (
+    <>
+    <CartNav/>
     <div>
-        casrt
-        {state.count}
+        {(state.count!=0)?
         <div className='item-wrapper'>
-      {state.task.map((val)=>{
+      {state.task.map((val,ind)=>{
         return (
             <>
     <div className='item-container'>
@@ -25,16 +29,21 @@ const Cart = ({product}) => {
 
     <div className='item-name'>
        <span>{val.title}</span> 
-       <button onClick={()=>dispatch({type:'addTask',value:product})}>Add to Cart</button>
+       <br/>
+       <button className="btn btn-light" onClick={()=>dispatch({type:'remove',value:product,index:ind})}>Remove</button>
     </div>
     </div></>
         )
       })}
  
-       
     </div>
-    <NavLink to="/">Back to Home</NavLink>
+        :<div className='empty'><h1>Basket is empty</h1></div>
+
+}
+
+   
     </div>
+    </>
   )
 }
 

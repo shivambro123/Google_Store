@@ -13,8 +13,17 @@ const reducer = (state,action) =>{
             return{
              task:[...state.task,action.value],
              count:state.count+1
-             
-             
+            }
+        }
+        case 'remove':{
+            return{
+                task:state.task.filter((ele,i)=>{
+                    return (
+                        i!=action.index
+                    )
+                }),
+                count:state.count-1
+                
             }
         }
         default:
