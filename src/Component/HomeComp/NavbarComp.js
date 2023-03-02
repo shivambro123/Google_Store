@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import InputComp from "./InputComp";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NavCompcss.css";
 import handlerClick from './InputComp'
-import NavLink from "react-bootstrap/esm/NavLink";
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../Context/ContextComp";
 
 const NavbarComp = () => {
+
+  const {state,dispatch}=useContext(DataContext)
     const [condition,setCondition]=useState(false)
     const [over,setOver]=useState(false)
     const Handler =(res)=>{
@@ -40,7 +44,7 @@ const cancelHandler=()=>{
                 <ul style={{listStyleType:'none'}}>
                    {(condition)?null:<li onClick={()=>Handler(true)}><i class="fa fa-search" aria-hidden="true"></i></li>}
                     <li onMouseOver={overHandler} onMouseOut={outHandler}><NavLink><i class="fa fa-question-circle" aria-hidden="true"></i></NavLink></li>
-                    <li><NavLink to="/cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></NavLink></li>
+                    <li><NavLink to="/cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i><span style={{fontSize:'18px',color:'red'}}>{state.count}</span></NavLink></li>
                     <li><NavLink><img src="profile.jpeg"
                     height={30}
                     width={30}

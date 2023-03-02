@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Itemcss.css'
+import { useContext } from 'react'
+import { DataContext } from '../Context/ContextComp'
 
-const Item = ({src,title}) => {
-    console.log(title)
+
+const Item = ({src,title,product}) => {
+  const {state,dispatch}=useContext(DataContext)
+      console.log(title)
+  const [click,setClick]=useState(true)
+
+
   return (
     <>
     <div className='item-container'>
@@ -15,7 +22,8 @@ const Item = ({src,title}) => {
     </div>
 
     <div className='item-name'>
-       <span>{title}</span> 
+       <span>{title}</span> <br/>
+       {(click)?<button className='btn btn-light button' onClick={()=>{dispatch({type:'addTask',value:product});setClick(false)}}>Add to Cart</button>:<button className='btn btn-secondary button'>Added</button>}
     </div>
     </div>
     </>
