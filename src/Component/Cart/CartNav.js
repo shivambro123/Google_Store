@@ -8,7 +8,7 @@ const CartNav = () => {
         <div className="pt-2 new">
           <div className="main-ul">
             <div>
-            <NavLink to="/"> <img src="google_logo.png" height={30} width={30} alt="logo" /></NavLink>
+            <NavLink to="/"> <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" height={30} width={30} alt="logo" /></NavLink>
             </div>
             <div>
                 <span className='cartNav-title'>Basket</span>
@@ -16,7 +16,7 @@ const CartNav = () => {
             <div className='hh'>
               <div className="listdata">
                 <ul style={{listStyleType:'none'}}>
-                    <li><NavLink><img src="profile.jpeg"
+                    <li><NavLink><img src="profile_pic.jpeg"
                     height={30}
                     width={30}
                     style={{borderRadius:'50px'}}

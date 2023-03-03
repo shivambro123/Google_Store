@@ -11,7 +11,7 @@ const ProductList = ({product}) => {
     <div className='item-wrapper'>
    { data.map((val,index)=>{
     console.log(val.src)
-        return <Item src={val.src} title={val.title} product={val}/>
+        return <Item src={val.src} title={val.title} price={val.price} product={val}/>
     })
 }
       </div>

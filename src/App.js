@@ -25,9 +25,6 @@ function App() {
       </Router>
       {/* <Main/> */}
       </ContextComp>
-    
-
-    
     </div>
   );
 }

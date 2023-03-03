@@ -12,7 +12,9 @@ const reducer = (state,action) =>{
         case 'addTask':{
             return{
              task:[...state.task,action.value],
-             count:state.count+1
+             count:state.count+1,
+             total:state.total+(+action.price)
+
             }
         }
         case 'remove':{
@@ -22,9 +24,11 @@ const reducer = (state,action) =>{
                         i!=action.index
                     )
                 }),
-                count:state.count-1
+                count:state.count-1,
+                total:state.total-(+action.price)
                 
             }
+           
         }
         default:
             return state
@@ -35,7 +39,8 @@ const ContextComp = ({children}) => {
 
 const initialstate = {
     count:0,
-    task:[]
+    task:[],
+    total:0
 }
 
 const [state,dispatch]=useReducer(reducer,initialstate)

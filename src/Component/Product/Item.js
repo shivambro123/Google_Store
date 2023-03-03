@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { DataContext } from '../Context/ContextComp'
 
 
-const Item = ({src,title,product}) => {
+const Item = ({src,title,price,product}) => {
   const {state,dispatch}=useContext(DataContext)
       console.log(title)
   const [click,setClick]=useState(true)
@@ -22,9 +22,14 @@ const Item = ({src,title,product}) => {
     </div>
 
     <div className='item-name'>
-       <span>{title}</span> <br/>
-       {(click)?<button className='btn btn-light button' onClick={()=>{dispatch({type:'addTask',value:product});setClick(false)}}>Add to Cart</button>:<button className='btn btn-secondary button'>Added</button>}
+      <div className='info'>
+      <div>{title}</div> 
+       <div>Rs:{price}</div>
+      </div>
+    {(click)?<button className='btn btn-light button' onClick={()=>{dispatch({type:'addTask',value:product,price:price});setClick(false)}}>Add to Cart</button>:<button className='btn btn-secondary button'>Added</button>}
+
     </div>
+
     </div>
     </>
   )
